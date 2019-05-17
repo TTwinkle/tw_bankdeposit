@@ -27,7 +27,7 @@ print("\n---------------------------------------------------------------------")
 
 
 MySQL.ready(function()
-    MySQL.Async.fetchAll("SELECT * FROM tw_bankdeposit", {}, function(response)
+    MySQL.Async.fetchAll("SELECT * FROM bankdeposit", {}, function(response)
         if response == nil then return end
 
         for i = 1, #response do
@@ -54,7 +54,7 @@ ESX.RegisterServerCallback("Bank.Deposit.Purchase", function(source, callback, c
     if bankaccount.money >= cost then
         player.removeAccountMoney("bank", cost)
 
-        MySQL.Async.execute("INSERT INTO tw_bankdeposit (identifier, content) VALUES (@identifier, @content)", {
+        MySQL.Async.execute("INSERT INTO bankdeposit (identifier, content) VALUES (@identifier, @content)", {
             ["@identifier"] = player.getIdentifier(),
             ["@content"] = "{}"
         })
@@ -114,7 +114,7 @@ RegisterEvent("Bank.Deposit.UpdateCache", function(source, cache)
 
     if player == nil then return end
 
-    MySQL.Async.execute("UPDATE tw_bankdeposit SET content = @content WHERE identifier = @identifier", {
+    MySQL.Async.execute("UPDATE bankdeposit SET content = @content WHERE identifier = @identifier", {
         ["@identifier"] = player.getIdentifier(),
         ["@content"] = cache
     })
