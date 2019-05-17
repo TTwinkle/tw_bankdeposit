@@ -49,59 +49,32 @@ end
 
 Citizen.CreateThread(function()
 	while true do
-
-	Citizen.Wait(0)
-
+		Citizen.Wait(10)
 		local playerPed = PlayerPedId()
-		local coords    = GetEntityCoords(playerPed)
-			
+		local coords    = GetEntityCoords(playerPed)	
 		if GetDistanceBetweenCoords(coords, 242.793, 224.521, 106.287, true) then
 			DrawMarker(-0, 242.793, 224.521, 106.287, 0.0, 0.0, 0.0, 0, 0.0, 0.0, 0.5, 0.5, 0.5, 255, 0, 0, 100, false, true, 2, false, false, false, false)
 			if GetDistanceBetweenCoords(coords, 242.793, 224.521, 106.287, true) < 1.0 then
-                DisplayHelpText('Premi ~INPUT_PICKUP~ per richiedere l\'accesso ad una cassetta privata')
-                if IsControlJustReleased(1, 51) then
-                    OnLoad()
+                		DisplayHelpText('Premi ~INPUT_PICKUP~ per richiedere l\'accesso ad una cassetta privata')
+                		if IsControlJustReleased(1, 51) then
+                    			OnLoad()
 				end
 			end
-		end
-	end
-end)
-
-Citizen.CreateThread(function()
-	while true do
-
-	Citizen.Wait(0)
-
-		local playerPed = PlayerPedId()
-		local coords    = GetEntityCoords(playerPed)
-			
-		if GetDistanceBetweenCoords(coords, 255.044, 227.904, 101.683, true) then
+		elseif GetDistanceBetweenCoords(coords, 255.044, 227.904, 101.683, true) then
 			DrawMarker(-0, 255.044, 227.904, 101.683, 0.0, 0.0, 0.0, 0, 0.0, 0.0, 0.5, 0.5, 0.5, 255, 0, 0, 100, false, true, 2, false, false, false, false)
 			if GetDistanceBetweenCoords(coords, 255.044, 227.904, 101.683, true) < 1.0 then
 				DisplayHelpText('Premi ~INPUT_PICKUP~ per richiedere l\'apertura del bunker')
-                if IsControlJustReleased(1, 51) then
-                apriporta()
-                end
+                		if IsControlJustReleased(1, 51) then
+                			apriporta()
+               			 end
 			end
-		end
-	end
-end)
-
-Citizen.CreateThread(function()
-	while true do
-
-	Citizen.Wait(0)
-
-		local playerPed = PlayerPedId()
-		local coords    = GetEntityCoords(playerPed)
-			
-		if GetDistanceBetweenCoords(coords,265.102, 213.952, 101.688, true) then
+		elseif GetDistanceBetweenCoords(coords,265.102, 213.952, 101.688, true) then
 			DrawMarker(-0, 265.102, 213.952, 101.688, 0.0, 0.0, 0.0, 0, 0.0, 0.0, 0.5, 0.5, 0.5, 255, 0, 0, 100, false, true, 2, false, false, false, false)
 			if GetDistanceBetweenCoords(coords, 265.102, 213.952, 101.688, true) < 1.0 then
 				DisplayHelpText('Premi ~INPUT_PICKUP~ per aprire la tua Cassetta Privata')
-                if IsControlJustReleased(1, 51) then
-                    OpenVault()
-                end
+                		if IsControlJustReleased(1, 51) then
+                    			OpenVault()
+                		end
 			end
 		end
 	end
@@ -176,7 +149,6 @@ end
 
 function OnLoad()
     Player = ESX.GetPlayerData()
-
     ESX.TriggerServerCallback("Bank.Deposit.FetchCache", function(cache)
         if cache == nil then
             ESX.UI.Menu.CloseAll()
