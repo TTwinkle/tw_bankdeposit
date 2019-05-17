@@ -3,7 +3,7 @@
 --                     Discord: Twinkle#0110                       --
 --     This script was based on esx_bankdeposit by FrostyLucas     --
 --            Don't Change the name and don't reupload.            --
---                 https://forum.fivem.net/u/twinkle/              --
+--                 https://forum.fivem.net/u/il_creon              --
 ---------------------------------------------------------------------
 
 Keys = {
