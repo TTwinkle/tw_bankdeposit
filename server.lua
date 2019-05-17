@@ -3,7 +3,7 @@
 --                     Discord: Twinkle#0110                       --
 --     This script was based on esx_bankdeposit by FrostyLucas     --
 --            Don't Change the name and don't reupload.            --
---                 https://forum.fivem.net/u/twinkle/              --
+--                 https://forum.fivem.net/u/il_creon              --
 ---------------------------------------------------------------------
 
 ESX = nil
@@ -22,7 +22,7 @@ print("\n---------------------------------------------------------------------")
 print("\n--                   tw_bankdeposit by Twinkle                     --")
 print("\n--                     Discord: Twinkle#0110                       --")
 print("\n--     This script was based on esx_bankdeposit by FrostyLucas     --")
-print("\n--                 https://forum.fivem.net/u/twinkle/              --")
+print("\n--                 https://forum.fivem.net/u/il_creon              --")
 print("\n---------------------------------------------------------------------")
 
 
