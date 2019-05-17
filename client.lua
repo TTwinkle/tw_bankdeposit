@@ -216,13 +216,7 @@ function OnLoad()
             VaultCache = cache
             UnlockVault()
 
-            Markers.Remove("Bank.Deposit.Purchase")
         end
-    end)
-end
-
-function UnlockVault()
-    Markers.Add("Bank.Deposit.Vault", Locations.Bank.Vault, "Premi ~INPUT_CONTEXT~ per interagire con la cassetta.", function()
     end)
 end
 
