@@ -15,3 +15,5 @@ BugFIX 1.1
 Now the cassettes can only be bought once.
 
 Fixed the bug that duplicates the data, each time you accessed it created a new data
+
+.
